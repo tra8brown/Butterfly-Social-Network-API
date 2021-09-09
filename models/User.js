@@ -21,10 +21,18 @@ const UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
+    toJSON: {
+        virtuals: true
+    }
 });
 
-//create the pizza model using the PizzaSchema
-const Pizza = model('Pizza', PizzaSchema);
+//virtual
+UserSchema.virtual('friendCount').get(function() {
+    return this.friends.length
+});
 
-//export the Pizza model
-model.exports = Pizza;
+//create the user model using the UserSchema
+const User = model('UserSchema', UserSchema);
+
+//export the model
+model.exports = User;

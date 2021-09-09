@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const ReactionSchema = new Schema({
     reactionId: {
@@ -23,17 +24,38 @@ const ReactionSchema = new Schema({
     },
 });
 
-// Borrowed from 
-// https: //stackoverflow.com/questions/3066586/get-string-in-yyyymmdd-format-from-js-date-object
-function getDate(createdAt) {
-    var yyyy = createdAt.getFullYear();
-    var mm = createdAt.getMonth() + 1; // getMonth() is zero-based
-    var dd = createdAt.getDate();
-    return String(10000 * yyyy + 100 * mm + dd); // Leading zeros for mm and dd}
-}
+const ThoughtSchema = new Schema({
+    thoughtText: {
+        type: String,
+        required: true,
+        minLength: 1,
+        maxLength: 280
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: createdAtVal => dateFormat(createdAtVal)
+    },
+    username: {
+        type: String,
+        required: true
+    },
+    reactions: [ReactionSchema]
+}, {
+    toJSON: {
+        virtuals: true,
+        getters: true
+    },
+    id: false
+});
 
-//create the pizza model using the PizzaSchema
-const Pizza = model('Pizza', PizzaSchema);
+//virtual to get total reaction count
+ThoughtSchema.virtual('reactionCount').get(function() {
+    return this.reaction.length;
+})
 
-//export the Pizza model
-model.exports = Pizza;
+//create the thought model using the ThoughtSchema
+const Thought = model('Thought', ThoughtSchema);
+
+//export the thought model
+model.exports = Thought;
