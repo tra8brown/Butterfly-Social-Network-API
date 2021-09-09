@@ -1,23 +1,26 @@
 {
-  "name": "butterfly-social-network-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "mongoose": "^6.0.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tra8brown/Butterfly-Social-Network-API.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tra8brown/Butterfly-Social-Network-API/issues"
-  },
-  "homepage": "https://github.com/tra8brown/Butterfly-Social-Network-API#readme"
+    "name": "butterfly-social-network-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^6.0.5"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tra8brown/Butterfly-Social-Network-API.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tra8brown/Butterfly-Social-Network-API/issues"
+    },
+    "homepage": "https://github.com/tra8brown/Butterfly-Social-Network-API#readme"
 }
