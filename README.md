@@ -1,18 +1,15 @@
 # Butterfly-Social-Network-API
 * This social networking API application was created for the purpose of reacting to friends thoughts, sharing their thoughts and creating a friends list.
 
-![tech-blog screenshot](screenshot.png)
-
-Live URL: https://tra8brown.github.io/Hedgehog-Tech-Blog/
-Heroku: https://tech-blogtb.herokuapp.com/
-Github URL: https://github.com/tra8brown/Hedgehog-Tech-Blog
+Live URL: https://tra8brown.github.io/Butterfly-Social-Network-API/
+Github URL: https://github.com/tra8brown/Butterfly-Social-Network-API
 
 <h1 align="center">Hi 👋, I'm Tracee</h1>
 <h3 align="center">A full-stack developer from Utah.</h3>
 
-- 🔭 I’m currently working on **ORM E-Commerce Back End**
+- 🔭 I’m currently working on **NoSQL Social Networking API**
 
-- 🌱 I’m currently learning **Insomnia, MVC**
+- 🌱 I’m currently learning **NoSQL, MongoDB, Mongoose, MongoDB atlas**
 
 - 👨‍💻 All of my projects are available at [https://github.com/tra8brown](https://github.com/tra8brown)
 
