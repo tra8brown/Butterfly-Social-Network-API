@@ -4,21 +4,24 @@ const { getAllUsers, getUserById, addUser, updateUserById, deleteUserById } = re
 //GET all users
 router
     .route('/')
-    .get(getAllUsers)
-    .post(addUser)
+    .get(getAllUsers);
+//.post(addUser);
 
 //GET a single user by it's _id
-router
-    .route('/:id')
-    .get(getUserById)
-    .put(updateUser)
-    .delete(deleteUserById);
+// todo - uncomment
+
+// router
+//     .route('/:id')
+//     .get(getUserById)
+//     .put(updateUser)
+//     .delete(deleteUserById);
 
 //populated thought and friend data
-router
-    .route('/:id/friends/:friendId')
-    .post(addFriend)
-    .delete(deleteFriend);
+// todo - uncomment
+// router
+//     .route('/:id/friends/:friendId')
+//     .post(addFriend)
+//     .delete(deleteFriend);
 
 //POST a new user:
 //example data

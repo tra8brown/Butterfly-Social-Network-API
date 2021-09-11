@@ -1,9 +1,29 @@
-const { User, Thought } = require("../models");
+const { builtinModules } = require("module");
+const { model, models } = require("mongoose");
+const { User, Thought, Reaction } = require("../models");
 
-//GET all users
-const userController = {},
+const userController = {
+    // get all users
+    getAllUsers(req, res) {
+        User.find({})
+            .populate({
+                path: 'thoughts',
+                select: '-__v'
+            })
+            .select('-__v')
+            .then(dbUserData => res.json(dbUserData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            });
+    },
 
     //create user via POST method
+    addUser({ body }, res) {
+        User.create(body)
+            .then(dbUserData => res.json(dbUserData))
+            .catch(err => res.status(400).json(err));
+    }
 
     //GET user by :id
 
@@ -14,3 +34,6 @@ const userController = {},
     //Updat4e a friend
 
     //deleting a friend
+}
+
+module.exports = userController
