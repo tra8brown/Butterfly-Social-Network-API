@@ -48,6 +48,7 @@ function print (path, layer) {
 
 app.listen(PORT, () => {
     console.log(`🌍 Connected on localhost:${PORT}`)
+    // print routes
     console.log(app._router.stack.forEach(print.bind(null, [])));
 });
 
