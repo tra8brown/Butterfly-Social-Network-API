@@ -30,9 +30,25 @@ const userController = {
         User.findById(req.params.id)
         .then(user => res.json(user))
         .catch(err => res.status(400).json(err));
-    }
+    },
 
     //Udate User by :id
+    updateUserById(req, res){
+        User.findById(req.params.id)
+        .then(user => {
+            return Object.assign(user, 
+                {username:req.body.username}, 
+                {email:req.body.email}
+            );
+        }).then((model) => {
+            return model.save();
+        }).then((updatedModel) => {
+            res.json({
+                updatedModel
+            });
+        })
+        .catch(err => res.status(400).json(err));
+    }
 
     //DELETE user by :id
 

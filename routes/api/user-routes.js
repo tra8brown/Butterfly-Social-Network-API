@@ -6,14 +6,15 @@ router
     .route('/')
     .get(getAllUsers)
     .post(addUser);
+    // .delete(deleteUserById)
 
 //GET a single user by it's _id
 // todo - uncomment
 
 router
     .route('/:id')
-    .get(getUserById);
-    // .put(updateUser)
+    .get(getUserById)
+    .put(updateUserById);
     // .delete(deleteUserById);
 
 //populated thought and friend data
