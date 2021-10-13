@@ -2,7 +2,7 @@
 
 - This social networking API application was created for the purpose of adding friends, reacting to friends thoughts, sharing their thoughts and creating a friends list.
 
-![Video](demoVideo.webm)
+![Video](demoV.gif)
 
 Live URL: https://tra8brown.github.io/Butterfly-Social-Network-API/
 Github URL: https://github.com/tra8brown/Butterfly-Social-Network-API
