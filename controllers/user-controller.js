@@ -48,9 +48,14 @@ const userController = {
             });
         })
         .catch(err => res.status(400).json(err));
-    }
+    },
 
     //DELETE user by :id
+    deleteUserById(req, res){
+        User.findByIdAndDelete(req.params.id)
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json(err));
+    }
 
     //Updat4e a friend
 

@@ -14,8 +14,8 @@ router
 router
     .route('/:id')
     .get(getUserById)
-    .put(updateUserById);
-    // .delete(deleteUserById);
+    .put(updateUserById)
+    .delete(deleteUserById);
 
 //populated thought and friend data
 // todo - uncomment
